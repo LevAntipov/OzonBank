@@ -22,7 +22,7 @@ body {
     box-sizing: border-box;
 }
 
-.progress{
+.progress {
     display: flex;
     height: 140px;
     width: 100%;
@@ -30,31 +30,30 @@ body {
     align-items: center;
 }
 
-.progress-circle {
+.progressCircle {
     position: relative;
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    background: conic-gradient(#3f7bff 0deg, #dfe6ee 0deg);
     margin: 0 auto;
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.center-circle::after{
+.centerCircle{
     position: absolute;
-    content: '';
     width: 85%;
     height: 85%;
     border-radius: 50%;
-    background-color: rgb(223, 230, 238);
+    background-color: rgba(223, 234, 245, 1);
     left: 50%;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -69,7 +68,7 @@ body {
     margin-bottom: 50px;
 }
 
-.valueControl input{
+.valueControl input {
     width: 45px;
     height: 25px;
     padding: 0;
@@ -79,48 +78,74 @@ body {
     text-align: center;
 }
 
-.buffer{
+.buffer {
     width: 50px;
     margin-right: 20px;
 }
 
-.valueControl{
+.valueControl {
     display: flex;
     width: 50%;
 }
 
-.animateToggle{
+.animateToggle {
     display: flex;
     width: 50%;
 }
-.hideToggle{
+
+.hideToggle {
     display: flex;
     width: 50%;
 }
 
 .toggle {
-width: 45px;
-height: 25px;
-border-radius: 12px;
-background: #dfe6ee;
-position: relative;
-cursor: pointer;
+    width: 45px;
+    height: 25px;
+    border-radius: 12px;
+    background: rgba(223, 234, 245, 1);
+    position: relative;
+    cursor: pointer;
 }
 
-.toggle.on{
+.toggle.on {
     background-color: rgb(63, 123, 255);
 }
 
-.toggleCircle{
-    position:absolute;
-    top:50%;
+.toggleCircle {
+    position: absolute;
+    top: 50%;
     transform: translateY(-50%);
-    left:3px;
+    left: 3px;
     width: 20px;
     height: 20px;
     background-color: white;
     border-radius: 50%;
     transition-duration: 0.2s;
+}
+
+@media (orientation: landscape) {
+    .title {
+        align-self: start;
+    }
+
+    .app {
+        width: 568px;
+        height: 320px;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .progress {
+        width: 40%;
+        margin-right: 40px;
+    }
+
+    .controls {
+        margin: 0;
+        align-items: flex-start;
+    }
+
 }
 
 
